@@ -9,17 +9,12 @@
     <h2>Example Data</h2>
 
     <ul>
-        <li>
-            <a href="/people/{{ $people[0]["id"] }}">
-                {{ $people[0]["name"] }}
-            </a>
-        </li>
-
-        <li>
-            <a href="/people/{{ $people[1]["id"] }}">
-                {{ $people[1]["name"] }}
-            </a>
-        </li>
+        @foreach ($people as $person)
+            <li>
+                <p>{{ $person["name"] }}</p>
+                <a href="/people/{{ $person["id"] }}">View profile</a>
+            </li>
+        @endforeach
     </ul>
 </body>
 </html>
