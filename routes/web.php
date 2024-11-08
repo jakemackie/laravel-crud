@@ -23,6 +23,10 @@ Route::get("/people", function () {
     ]);
 });
 
+Route::get("/people/create", function () {
+    return view("people.create");
+});
+
 Route::get("/people/{id}", function ($id) {
     // fetch record with id
     return view("people.show", ["id" => $id]);
