@@ -1,3 +1,3 @@
 <x-layout>
-  <h2>Create a new person</h2>
+    <h2 class="mb-8 text-xl font-medium">Create a person</h2>
 </x-layout>
