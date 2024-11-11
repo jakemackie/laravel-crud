@@ -15,8 +15,8 @@
         <nav class="mx-auto max-w-screen-lg flex justify-between text-xl font-semibold">
             <a href="/" class="text-2xl">My project</a>
             <div class="flex gap-8">
-                <a href="/people">All people</a>
-                <a href="/people/create">Create person</a>
+                <a href="{{ route('people.index') }}">All people</a>
+                <a href="{{ route('people.create') }}">Create person</a>
             </div>
         </nav>
     </header>
