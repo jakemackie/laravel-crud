@@ -7,16 +7,6 @@ Route::get("/", function () {
     return view("welcome");
 });
 
-Route::get("/people", [
-    PersonController::class,
-    "index"
-]);
-
-Route::get("/people/create", function () {
-    return view("people.create");
-});
-
-Route::get("/people/{id}", function ($id) {
-    // fetch record with id
-    return view("people.show", ["id" => $id]);
-});
+Route::get("/people", [PersonController::class, "index"]);
+Route::get("/people/create", [PersonController::class, "create"]);
+Route::get("/people/{id}", [PersonController::class, "show"]);
