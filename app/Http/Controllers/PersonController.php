@@ -16,11 +16,14 @@ class PersonController extends Controller
 
     public function show($id)
     {
-
+        // route -> /people/{id}
+        $person = Person::findOrFail($id);
+        return view("people.show", ["person" => $person]);
     }
 
     public function create()
     {
+        return view("people.create");
     }
 
     public function store()
