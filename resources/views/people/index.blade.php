@@ -5,7 +5,7 @@
         <ul class="flex flex-col gap-y-4">
             @foreach ($people as $person)
                 <li>
-                    <x-card href="/people/{{ $person->id }}" :highlight="$person->age == 19">
+                    <x-card href="{{ route('people.show', $person->id) }}" :highlight="$person->age == 19">
                         <p class="text-lg font-medium">{{ $person->name }}</p>
                     </x-card>
                 </li>
