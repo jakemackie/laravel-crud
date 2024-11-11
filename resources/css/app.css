@@ -5,7 +5,3 @@
 body {
     @apply bg-slate-100 text-slate-700;
 }
-
-.card {
-    @apply px-6 py-4 rounded-lg border-4;
-}
