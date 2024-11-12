@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Person extends Model
+class Team extends Model
 {
-    protected $fillable = ["name", "age", "bio"];
+    protected $fillable = ["name", "description", "location"];
 
-    /** @use HasFactory<\Database\Factories\PersonFactory> */
+    /** @use HasFactory<\Database\Factories\TeamFactory> */
     use HasFactory;
 }
