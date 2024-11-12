@@ -9,7 +9,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $people = Person::orderBy("created_at", "desc")->get();
+        $people = Person::orderBy("created_at", "desc")->paginate(10);
 
         return view("people.index", ["people" => $people]);
     }
