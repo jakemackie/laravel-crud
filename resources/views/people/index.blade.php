@@ -12,6 +12,10 @@
             @endforeach
         </ul> 
 
+        <div class="my-8">
+            {{ $people->links() }}
+        </div>
+
     @else
         <p>No people found</p>
     @endif
