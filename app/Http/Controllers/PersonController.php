@@ -9,7 +9,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $people = Person::orderBy("created_at", "desc")->paginate(10);
+        $people = Person::with("team")->orderBy("created_at", "desc")->paginate(10);
 
         return view("people.index", ["people" => $people]);
     }
@@ -17,7 +17,7 @@ class PersonController extends Controller
     public function show($id)
     {
         // route -> /people/{id}
-        $person = Person::findOrFail($id);
+        $person = Person::with("team")->findOrFail($id);
         return view("people.show", ["person" => $person]);
     }
 
