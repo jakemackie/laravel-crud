@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\QueryException;
 
-test('Database health check', function () {
+test('Database health check.', function () {
     try {
         DB::connection('sqlite')->getPdo();
         $this->assertTrue(true, 'Database connection is healthy');

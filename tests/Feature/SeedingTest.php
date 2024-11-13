@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
 
-test('Database migration, seeding, and retrieving a person by ID', function () {
+test('Database migration, seeding and retrieving a seeded record.', function () {
     // Command to invoke the migration and seeding
     $status_code = Artisan::call('migrate:fresh', ['--seed' => true]);
 
