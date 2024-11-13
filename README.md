@@ -1,6 +1,14 @@
-### A Laravel CRUD Template
+<p align="center">
+    <a href="https://herd.laravel.com/" target="_blank"><img src="https://img.shields.io/badge/Herd-FF5722?style=for-the-badge&logo=laravel&logoColor=white" alt="Herd Badge"></a>
+    <a href="https://laravel.com" target="_blank"><img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel Badge"></a>
+    <a href="https://www.php.net" target="_blank"><img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Badge"></a>
+    <a href="https://nodejs.org" target="_blank"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js Badge"></a>
+    <a href="https://www.sqlite.org" target="_blank"><img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite Badge"></a>
+    <a href="https://vitejs.dev" target="_blank"><img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge"></a>
+</p>
 
-> **Prerequisites:** Make sure you have [Herd](https://herd.laravel.com/), [NodeJS](https://nodejs.org/en) and [Git](https://git-scm.com/downloads) installed before starting.
+
+> **Prerequisites:** Make sure you have [Herd](https://herd.laravel.com/) and [Node](https://nodejs.org/en) installed before starting.
 
 1. **Clone the Repository**
 
