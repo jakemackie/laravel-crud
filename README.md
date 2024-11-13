@@ -11,8 +11,6 @@
     <a href="https://vitejs.dev" target="_blank"><img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite Badge"></a>
 </p>
 
----
-
 > **Prerequisites:** Make sure you have [Herd](https://herd.laravel.com/) and [Node](https://nodejs.org/en) installed before starting.
 
 1. **Clone the Repository**
