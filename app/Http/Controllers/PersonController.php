@@ -29,7 +29,17 @@ class PersonController extends Controller
         return view("people.create", ["teams" => $teams]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $validated = $request->validate([
+            "name" => "required|string|max:255",
+            "age" => "required|integer|min:16|max:100",
+            "bio" => "required|string|min:20|max:1000",
+            "team_id" => "required|exists:teams,id",
+        ]);
+
+        Person::create($validated);
+
+        return redirect()->route("people.index");
     }
 }

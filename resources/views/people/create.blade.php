@@ -1,5 +1,9 @@
 <x-layout>
-    <form action="" method="" class="flex flex-col items-start gap-4 text-left text-lg">
+    <form 
+        action="{{ route('people.store') }}" 
+        method="POST" 
+        class="flex flex-col items-start gap-4 text-left text-lg"
+    >
         @csrf
 
         <h2 class="text-2xl mb-4">Create a New Person</h2>
