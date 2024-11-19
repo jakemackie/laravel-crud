@@ -23,6 +23,7 @@
             type="number" 
             id="age" 
             name="age" 
+            value="{{ old('age') }}"
             class="w-full px-4 py-3 rounded-xl outline outline-slate-200 shadow-sm"
             required
         >
@@ -34,7 +35,7 @@
             name="bio" 
             class="w-full px-4 py-3 rounded-xl outline outline-slate-200 shadow-sm"
             required
-        ></textarea>
+        >{{ old('bio') }}</textarea>
 
         <label for="team_id">Team:</label>
         <select 
@@ -45,10 +46,20 @@
         >
             <option value="" disabled selected>Select a team</option>
             @foreach ($teams as $team)
-                <option value="{{ $team->id }}">{{ $team->name }}</option>
+                <option value="{{ $team->id }}" {{ old('team_id') == $team->id ? 'selected' : '' }}>
+                    {{ $team->name }}
+                </option>
             @endforeach
         </select>
 
         <button type="submit" class="mt-6 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl outline outline-2 outline-indigo-300">Create Person</button>
+    
+        @if ($errors->any())
+            <ul class="mt-4 px-4 py-2 bg-red-100 rounded-xl">
+                @foreach ($errors->all() as $error)
+                    <li class="my-2 text-red-600">{{ $error }}</li>
+                @endforeach
+            </ul>
+        @endif
     </form>
 </x-layout>
