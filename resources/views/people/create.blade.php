@@ -14,7 +14,7 @@
             id="name" 
             name="name" 
             value="{{ old('name') }}" 
-            class="w-full px-4 py-3 rounded-xl outline outline-slate-200 shadow-sm"
+            class="w-full form-input"
             required
         >
 
@@ -24,7 +24,7 @@
             id="age" 
             name="age" 
             value="{{ old('age') }}"
-            class="w-full px-4 py-3 rounded-xl outline outline-slate-200 shadow-sm"
+            class="w-full form-input"
             required
         >
 
@@ -33,24 +33,31 @@
             rows="5"
             id="bio" 
             name="bio" 
-            class="w-full px-4 py-3 rounded-xl outline outline-slate-200 shadow-sm"
+            class="w-full form-input"
             required
         >{{ old('bio') }}</textarea>
 
         <label for="team_id">Team:</label>
-        <select 
-            id="team_id"
-            name="team_id" 
-            required 
-            class="w-full px-4 py-3 rounded-xl outline outline-slate-200 shadow-sm"
-        >
-            <option value="" disabled selected>Select a team</option>
-            @foreach ($teams as $team)
-                <option value="{{ $team->id }}" {{ old('team_id') == $team->id ? 'selected' : '' }}>
-                    {{ $team->name }}
-                </option>
-            @endforeach
-        </select>
+
+        <div class="w-full md:w-auto relative inline-block">
+            <select 
+                id="team_id"
+                name="team_id" 
+                required 
+                class="w-full md:w-auto appearance-none form-input"
+            >
+                <option value="" disabled selected>Select a team</option>
+                @foreach ($teams as $team)
+                    <option value="{{ $team->id }}" {{ old('team_id') == $team->id ? 'selected' : '' }}>
+                        {{ $team->name }}
+                    </option>
+                @endforeach
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
+                @svg('icons/chevron-down.svg', 'w-5 h-5 text-gray-500')
+            </div>
+        </div>
+        
 
         <button type="submit" class="mt-6 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl outline outline-2 outline-indigo-300">Create Person</button>
     
