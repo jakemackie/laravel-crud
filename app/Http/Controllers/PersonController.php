@@ -42,4 +42,12 @@ class PersonController extends Controller
 
         return redirect()->route("people.index");
     }
+
+    public function destroy($id)
+    {
+        $person = Person::findOrFail($id);
+        $person->delete();
+
+        return redirect()->route("people.index");
+    }
 }
