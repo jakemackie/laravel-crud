@@ -19,8 +19,8 @@
 
     ```
     cd Herd
-    git clone https://github.com/jakemackie/my-project
-    cd my-project
+    git clone https://github.com/jakemackie/laravel-crud
+    cd laravel-crud
     ```
 
 2. **Installation**
