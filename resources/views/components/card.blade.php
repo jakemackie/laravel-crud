@@ -1,8 +1,8 @@
 @props(["highlight" => false])
 
 <div @class(
-        ['border-blue-300 bg-blue-50 shadow-md' => $highlight, 
-        'bg-white border-2 py-4 px-6 rounded-xl']
+        ['bg-indigo-100 border-2 border-indigo-300' => $highlight, 
+        'bg-white border py-4 px-6 rounded-xl']
     )
 >
     {{ $slot }}

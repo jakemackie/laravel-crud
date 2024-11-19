@@ -5,3 +5,7 @@
 body {
     @apply bg-slate-100 text-slate-700;
 }
+
+.form-input {
+    @apply px-4 py-3 rounded-xl shadow-sm border border-slate-200 outline-4 outline-transparent focus:outline-indigo-400;
+}
