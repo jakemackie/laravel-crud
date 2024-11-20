@@ -11,7 +11,7 @@
 </head>
 <body>
     @if (session('success'))
-        <div id="flash" class="p-4 text-center bg-blue-100 text-blue-500 font-bold">
+        <div id="flash" class="p-4 text-center bg-green-50 text-green-500 font-bold">
             {{ session('success') }}
         </div>
     @endif
