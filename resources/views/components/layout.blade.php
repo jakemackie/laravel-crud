@@ -10,6 +10,11 @@
 
 </head>
 <body>
+    @if (session('success'))
+        <div id="flash" class="p-4 text-center bg-green-50 text-green-500 font-bold">
+            {{ session('success') }}
+        </div>
+    @endif
 
     <header class="py-8 bg-white shadow-sm">
         <nav class="mx-auto px-4 lg:px-0 max-w-screen-lg flex justify-between text-lg lg:text-xl font-semibold">
@@ -24,6 +29,18 @@
     <main class="mx-auto max-w-screen-lg mt-12 px-4 lg:px-0">
         {{ $slot }}
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var flash = document.getElementById('flash');
+
+            if (flash) {
+                setTimeout(function () {
+                    flash.remove(); 
+                }, 2000);
+            }
+        });
+    </script>
 
 </body>
 </html>

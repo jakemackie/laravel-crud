@@ -40,7 +40,7 @@ class PersonController extends Controller
 
         Person::create($validated);
 
-        return redirect()->route("people.index");
+        return redirect()->route("people.index")->with("success", "Person created!");
     }
 
     public function destroy($id)
@@ -48,6 +48,6 @@ class PersonController extends Controller
         $person = Person::findOrFail($id);
         $person->delete();
 
-        return redirect()->route("people.index");
+        return redirect()->route("people.index")->with("success", "Person deleted!");
     }
 }
