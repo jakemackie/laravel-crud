@@ -15,10 +15,10 @@ class PersonController extends Controller
         return view("people.index", ["people" => $people]);
     }
 
-    public function show($id)
+    public function show(Person $person)
     {
-        // route -> /people/{id}
-        $person = Person::with("team")->findOrFail($id);
+        $person->load("team");
+        
         return view("people.show", ["person" => $person]);
     }
 
@@ -43,9 +43,8 @@ class PersonController extends Controller
         return redirect()->route("people.index")->with("success", "Person created!");
     }
 
-    public function destroy($id)
+    public function destroy(Person $person)
     {
-        $person = Person::findOrFail($id);
         $person->delete();
 
         return redirect()->route("people.index")->with("success", "Person deleted!");

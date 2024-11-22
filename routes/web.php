@@ -13,6 +13,6 @@ Route::fallback(function () {
 
 Route::get("/people", [PersonController::class, "index"])->name("people.index");
 Route::get("/people/create", [PersonController::class, "create"])->name("people.create");
-Route::get("/people/{id}", [PersonController::class, "show"])->name("people.show");
+Route::get("/people/{person}", [PersonController::class, "show"])->name("people.show");
 Route::post("/people", [PersonController::class, "store"])->name("people.store");
-Route::delete("/people/{id}", [PersonController::class, "destroy"])->name("people.destroy");
+Route::delete("/people/{person}", [PersonController::class, "destroy"])->name("people.destroy");
